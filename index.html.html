@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilsoniskais Līdzdalības Stūrītis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        section {
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+        }
+        #commentSection {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        #comments {
+            list-style-type: none;
+            padding: 0;
+        }
+        .comment {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pilsoniskais Līdzdalības Stūrītis</h1>
+    </header>
+    
+    <section>
+        <h2>Saņem informatīvos materiālus par vēlēšanām Latvijā</h2>
+        <p>Saeimas vēlēšanas</p>
+<p>Latvijas Republikas Satversme nosaka, ka Saeima sastāv no simts tautas priekšstāvjiem, kurus uz četriem gadiem ievēlē vispārīgās, tiešās, aizklātās un proporcionālās vēlēšanās. Tiesības vēlēt Saeimu ir pilntiesīgiem Latvijas pilsoņiem, kuri vēlēšanu dienā ir sasnieguši 18 gadu vecumu.</p>
+<p>15. Saeimas vēlēšanas Latvijā notiks ne vēlāk kā 2026. gada 3. oktobrī.</p>
+<p>Prezidenta vēlēšanas</p>
+<p>Latvijas Valsts prezidenta vēlēšanas notika 2023. gada 31. maijā. Par valsts prezidentu tika ievēlēts Edgars Rinkēvičs.</p>
+<p>Nakamas prezidenta vēlēšanas notiks 2027 gadā.</p>
+
+    </section>
+
+    <section>
+        <h2>Instrukcija kā piedalīties vēlēšanās</h2>
+        <p>Tiesības piedalīties Saeimas vēlēšanās ir visiem Latvijas pilsoņiem, kuri vēlēšanu dienā sasnieguši 18 gadu vecumu. Personai ir tiesības vēlēt jebkurā vēlēšanu apgabalā (Rīga, Vidzeme, Latgale, Zemgale un Kurzeme) un balsošanai izvēlēties jebkuru vēlēšanu iecirknī Latvijā vai ārvalstīs bez iepriekšējas pieteikšanās. Katra vēlēšanu apgabala iecirkņos ir atšķirīgas (tikai attiecīgā vēlēšanu apgabala) vēlēšanu zīmes. Sīkak:<a href="url">https://www.cvk.lv/lv/saeimas-velesanas</a></p>
+    </section>
+
+    <section>
+        <h2>Piedalies diskusijās un veic interaktīvas aktivitātes</h2>
+        <p>Apmainies ar viedokļiem ar citiem lietotājiem.</p>
+    </section>
+
+    <section id="commentSection">
+        <h2>Komentāri</h2>
+        <ul id="comments">
+            <!-- Komentāri šeit -->
+            <li class="comment">Lietotājs1: Labs resurss!</li>
+            <li class="comment">Lietotājs2: Gaidīšu jaunumus par vēlēšanām.</li>
+        </ul>
+        <!-- Komentāra pievienošanas forma -->
+        <form id="commentForm">
+            <label for="comment">Pievienot komentāru:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+            <button type="button" onclick="addComment()">Pievienot</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Pilsoniskais Līdzdalības Stūrītis</p>
+    </footer>
+
+    <script>
+        function addComment() {
+            const commentText = document.getElementById("comment").value;
+            if (commentText.trim() !== "") {
+                const commentList = document.getElementById("comments");
+                const newComment = document.createElement("li");
+                newComment.className = "comment";
+                newComment.appendChild(document.createTextNode(commentText));
+                commentList.appendChild(newComment);
+                document.getElementById("commentForm").reset();
+            }
+        }
+    </script>
+</body>
+</html>
